@@ -35,7 +35,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="91" selection-start="811" selection-end="811" vertical-scroll-proportion="-12.8">
+            <state line="14" column="34" selection-start="603" selection-end="603" vertical-scroll-proportion="-8.96">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="server.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="57" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.5884413">
+            <state line="34" column="1" selection-start="978" selection-end="978" vertical-scroll-proportion="0.33625218">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="street.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/street.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="15" selection-start="694" selection-end="694" vertical-scroll-proportion="-9.6">
+            <state line="22" column="19" selection-start="937" selection-end="937" vertical-scroll-proportion="-10.88">
               <folding />
             </state>
           </provider>
@@ -292,6 +292,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/static/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="18" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/streetstatus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -299,9 +306,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/style.less">
+    <entry file="file://$PROJECT_DIR$/street.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="18" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
+        <state line="22" column="19" selection-start="937" selection-end="937" vertical-scroll-proportion="-10.88">
           <folding />
         </state>
       </provider>
@@ -315,21 +322,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="91" selection-start="811" selection-end="811" vertical-scroll-proportion="-12.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/street.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="15" selection-start="694" selection-end="694" vertical-scroll-proportion="-9.6">
+        <state line="14" column="34" selection-start="603" selection-end="603" vertical-scroll-proportion="-8.96">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="57" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.5884413">
+        <state line="34" column="1" selection-start="978" selection-end="978" vertical-scroll-proportion="0.33625218">
           <folding />
         </state>
       </provider>

@@ -9,12 +9,8 @@
 </head>
 <body>
     <div class="streetbox">
-        <form method="post" action="/find">
-            <label>Type in your street name</label><input type="text" name="street" />, Christchurch New Zealand
-            <input type="submit" value="Go" />
-        </form>
         <form action="/logout" method="post">
-            <input type="submit" value="Logout" />
+            {{ escape(name) }} <input type="submit" value="Logout" />
         </form>
     </div>
     <div class="content">
@@ -23,7 +19,6 @@
             <form class="checkin" method="post" action="/post">
                 {{ xsrf_form_html() }}
                 <input type="hidden" name="type" value="checkin" />
-                <label for="name">Your name</label><input id="name" type="text" name="name" value="{{ escape(name) }}" /><br />
                 <input type="submit" value="Check in" />
             </form>
         </div>
@@ -32,7 +27,6 @@
             <form class="notice" method="post" action="/post">
                 {{ xsrf_form_html() }}
                 <input type="hidden" name="type" value="notice" />
-                <label for="name">Your name</label><input id="name" type="text" name="name" value="{{ escape(name) }}" /><br />
                 <label for="message">What's happening?</label><textarea id="message" cols="40" rows="4" name="message"></textarea><br />
                 <input type="submit" value="Post" />
             </form>
