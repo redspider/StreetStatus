@@ -1,0 +1,82 @@
+/* Reset to some base standard */
+@import url("reset.css");
+/* Set up text so it isn't completely awful */
+@import url("text.css");
+
+/* Page */
+
+html {
+    background-color: white;
+}
+
+body {
+    background-color: #eee;
+    border: none;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    position: relative;
+    width: 768px;
+    color: #222;
+}
+
+a {
+    color: #722;
+    text-decoration: none;
+}
+
+h2 {
+    color: #444;
+    border-bottom: 4px solid #555;
+}
+
+div.streetbox {
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: 768px;
+    font-size: 120%;
+}
+
+div.notice-set {
+    div.notice {
+        position: relative;
+        div.date {
+            border-bottom:2px solid #aaa;
+            font-weight: bold;
+        }
+        div.name {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        div.message {}
+        padding-bottom: 10px;
+    }
+
+    div.checkin {
+        position: relative;
+        div.date {
+            display: inline;
+            font-weight: bold;
+        }
+        div.name {
+            display: inline;
+        }
+        div.note {
+            display: inline;
+        }
+    }
+}
+
+form.checkin, form.notice {
+    label {
+        display: block;
+        font-weight: bold;
+        font-size: 90%;
+    }
+
+    margin: 10px;
+}

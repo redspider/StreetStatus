@@ -1,0 +1,70 @@
+@import url("reset.css");
+
+@import url("text.css");
+/* Reset to some base standard */
+/* Set up text so it isn't completely awful */
+/* Page */
+html {
+  background-color: white;
+}
+body {
+  background-color: #eee;
+  border: none;
+  margin: 0px auto 0px auto;
+  padding: 10px;
+  position: relative;
+  width: 768px;
+  color: #222;
+}
+a {
+  color: #722;
+  text-decoration: none;
+}
+h2 {
+  color: #444;
+  border-bottom: 4px solid #555;
+}
+div.streetbox {
+  background-color: #ddd;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+  width: 768px;
+  font-size: 120%;
+}
+div.notice-set div.notice {
+  position: relative;
+  padding-bottom: 10px;
+}
+div.notice-set div.notice div.date {
+  border-bottom: 2px solid #aaa;
+  font-weight: bold;
+}
+div.notice-set div.notice div.name {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+div.notice-set div.checkin {
+  position: relative;
+}
+div.notice-set div.checkin div.date {
+  display: inline;
+  font-weight: bold;
+}
+div.notice-set div.checkin div.name {
+  display: inline;
+}
+div.notice-set div.checkin div.note {
+  display: inline;
+}
+form.checkin, form.notice {
+  margin: 10px;
+}
+form.checkin label, form.notice label {
+  display: block;
+  font-weight: bold;
+  font-size: 90%;
+}

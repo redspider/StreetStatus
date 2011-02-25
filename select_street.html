@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Select street</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/streetstatus.js"></script>
+</head>
+<body>
+    {% if len(streets) == 0 %}
+        <strong>We couldn't find a street like that. Please <a href="/">Try again</a></strong>
+    {% else %}
+        <p>Select the street that matches</p>
+        <ul>
+            {% for street in streets %}
+                <li><a href="/find?street={{ url_escape(street) }}">{{ escape(street) }}</a></li>
+            {% end %}
+        </ul>
+    {% end %}
+</body>
+</html>
