@@ -73,6 +73,12 @@ class IndexHandler(tornado.web.RequestHandler):
         # Redirect
         self.redirect('/')
 
+class LogoutHandler(tornado.web.RequestHandler):
+    def post(self, *args, **kwargs):
+        self.set_secure_cookie('street','', expires_days=-1)
+        self.set_secure_cookie('name','', expires_days=-1)
+        self.redirect('/')
+
 class FindStreetHandler(tornado.web.RequestHandler):
     @tornado.web.asynchronous
     def post(self, *args, **kwargs):
@@ -128,7 +134,7 @@ class PostHandler(tornado.web.RequestHandler):
 
 #configure the Tornado application
 application = tornado.web.Application(
-    [(r"/", IndexHandler), (r"/post", PostHandler), (r"/find", FindStreetHandler)],
+    [(r"/", IndexHandler), (r"/post", PostHandler), (r"/find", FindStreetHandler), (r'/logout', LogoutHandler)],
     static_path = os.path.join(os.path.dirname(__file__), "static"),
     cookie_secret = "I can't believe it's not butter"
 )
