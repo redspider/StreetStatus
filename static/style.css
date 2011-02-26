@@ -182,6 +182,12 @@ div.incident {
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
 }
+div.incident a {
+  font-weight: bold;
+}
+div.incident .category {
+  margin-left: 10px;
+}
 div.incident .distance, div.incident .location {
   color: #444;
   margin-left: 10px;
