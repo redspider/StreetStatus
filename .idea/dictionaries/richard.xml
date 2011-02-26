@@ -2,6 +2,7 @@
   <dictionary name="richard">
     <words>
       <w>mongo</w>
+      <w>mongodb</w>
     </words>
   </dictionary>
 </component>

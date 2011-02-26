@@ -1,4 +1,5 @@
 from datetime import datetime
+from time import time
 import tornado.web
 import tornado.websocket
 import tornado.ioloop
@@ -9,6 +10,8 @@ import pymongo
 import bson
 import os
 import logging
+from upoints.point import Point
+
 log = logging.getLogger()
 
 logging.getLogger().setLevel(logging.DEBUG)
@@ -38,8 +41,9 @@ class IndexHandler(tornado.web.RequestHandler):
 
         # Retrieve street details (pagination would be good)
         notices = mc.notices.find({'street': street}).sort([('dated',-1)]).limit(40)
+        geo = mc.streets.find_one({'street': street}) or 'none'
 
-        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date)
+        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date, geo=str(geo))
 
 class LogoutHandler(tornado.web.RequestHandler):
     def post(self, *args, **kwargs):
@@ -69,9 +73,14 @@ class FindStreetHandler(tornado.web.RequestHandler):
         streets = []
         if result['status'] == 'OK':
             streets = [c['formatted_address'] for c in result['results'] if "route" in c['types']]
+
+            for c in result['results']:
+                mc.streets.insert({'street': c['formatted_address'], 'geo': c})
+
         if len(streets) == 1:
             self.set_secure_cookie('street', streets[0])
             self.redirect('/')
+
         self.render("select_street.html", streets=streets)
 
     def get(self, *args, **kwargs):
@@ -105,6 +114,21 @@ class PostHandler(tornado.web.RequestHandler):
 
         self.redirect('/')
 
+incidents = []
+incident_map = {}
+
+def rebuild_location_cache():
+    global incidents,incident_map
+    incidents = []
+    incident_map = {}
+    for incident in mc.incident.find({}):
+        point = Point(incident['latitude'],incident['longitude'])
+        incidents.append((incident['id'], point))
+        incident_map[incident['id']] = incident
+
+    tornado.ioloop.IOLoop.instance().add_timeout(time.time()+60, rebuild_location_cache)
+    
+    
 #configure the Tornado application
 application = tornado.web.Application(
     [(r"/", IndexHandler), (r"/post", PostHandler), (r"/find", FindStreetHandler), (r'/logout', LogoutHandler)],
@@ -115,5 +139,9 @@ application = tornado.web.Application(
 if __name__ == "__main__":
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(8889)
+
+    # Build location cache
+    rebuild_location_cache()
+    
     ioloop = tornado.ioloop.IOLoop.instance()
     ioloop.start()
