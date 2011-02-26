@@ -69,7 +69,7 @@ class FindStreetHandler(tornado.web.RequestHandler):
         if result['status'] == 'OK':
             streets = [c['formatted_address'] for c in result['results'] if "route" in c['types']]
         if len(streets) == 1:
-            self.set_secure_cookie('street', street[0])
+            self.set_secure_cookie('street', streets[0])
             self.redirect('/')
         self.render("select_street.html", streets=streets)
 
