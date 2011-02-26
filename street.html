@@ -106,7 +106,7 @@
                 {% for incident in nearby %}
                 <div class="incident">
                     <div class="title">
-                        <a href="http://eq.org.nz/report/view/{{ incident['id'] }}">{{ incident['title'] }}</a>
+                        <a target="_blank" href="http://eq.org.nz/reports/view/{{ incident['id'] }}">{{ incident['title'] }}</a>
                     </div>
                     <div class="category">
                         {{ ', '.join([c['title'] for c in incident['categories']]) }}
