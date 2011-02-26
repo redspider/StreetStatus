@@ -11,7 +11,7 @@
 <h2>Street Status for Christchurch</h2>
 <div class="streetbox">
     <form method="post" action="/find">
-        <label>Type in your name</label><input type="text" name="name" /><br />
+        <label>Type in your name</label><input type="text" name="name" value="{{ name }}"/><br />
         <label>Type in your street</label><input type="text" name="street" />, Christchurch New Zealand
         <input type="submit" value="Go" />
     </form>

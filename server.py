@@ -27,8 +27,8 @@ class IndexHandler(tornado.web.RequestHandler):
     """Regular HTTP handler to serve the dashboard page"""
     def get(self, *args, **kwargs):
         """ Display street """
-        if not self.get_secure_cookie('street') or not self.get_secure_cookie('name'):
-            self.render("index.html")
+        if not self.get_secure_cookie('street'):
+            self.render("index.html", name=name)
             return
 
         street = self.get_secure_cookie('street')
@@ -42,7 +42,6 @@ class IndexHandler(tornado.web.RequestHandler):
 class LogoutHandler(tornado.web.RequestHandler):
     def post(self, *args, **kwargs):
         self.set_secure_cookie('street','', expires_days=-1)
-        self.set_secure_cookie('name','', expires_days=-1)
         self.redirect('/')
 
 class FindStreetHandler(tornado.web.RequestHandler):
