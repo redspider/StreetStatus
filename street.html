@@ -40,7 +40,7 @@
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="question" />
                                 <textarea id="message" cols="60" rows="4" name="message"></textarea><br />
-                                <input type="submit" value="Post" />
+                                <input class="post_button" type="submit" value="Post" />
                             </form>
                         </div>
                         <div id="info">
@@ -49,7 +49,7 @@
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="info" />
                                 <textarea id="message" cols="60" rows="4" name="message"></textarea><br />
-                                <input type="submit" value="Post" />
+                                <input class="post_button" type="submit" value="Post" />
                             </form>
                         </div>
                         <div id="problem">
@@ -58,7 +58,7 @@
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="problem" />
                                 <textarea id="message" cols="40" rows="4" name="message"></textarea><br />
-                                <input type="submit" value="Post" />
+                                <input class="post_button" type="submit" value="Post" />
                             </form>
                         </div>
                         <div id="praise">
@@ -67,7 +67,7 @@
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="praise" />
                                 <textarea id="message" cols="40" rows="4" name="message"></textarea><br />
-                                <input id="post_button" type="submit" value="Post" />
+                                <input class="post_button" type="submit" value="Post" />
                             </form>
                         </div>
                     </div>
@@ -77,11 +77,25 @@
                     {% for notice in notices %}
                         {% if notice['type'] == 'checkin' %}
                             <div class="checkin">
+                                <div class="icon_checkin">
+                                    
+                                </div>
                                 <div class="date">{{ format_date(notice['dated']) }}</div>
-                                <div class="name">{{ escape(notice['name'])}}</div>
+                                <div class="name">{{ escape(notice['name'])}} checked in!</div>
                             </div>
                         {% else %}
                             <div class="notice {{ notice['type'] }}">
+                                <div class="icon_{{ notice['type'] }}">
+                                    {% if notice['type'] == 'question' %}
+                                        ?
+                                    {% elif notice['type'] == 'info' %}
+                                        i
+                                    {% elif notice['type'] == 'problem' %}
+                                        !
+                                    {% elif notice['type'] == 'praise' %}
+                                        :)
+                                    {% end %}
+                                </div>
                                 <div class="date">{{ format_date(notice['dated']) }}</div>
                                 <div class="name">{{ escape(notice['name'])}}</div>
                                 <div class="message">{{ notice['message'] }}</div>

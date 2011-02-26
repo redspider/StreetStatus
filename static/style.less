@@ -70,6 +70,7 @@ div.streetbox {
 
 div.notice-set {
     div.notice {
+        margin-left: 40px;
         position: relative;
         div.date {
             border-bottom:2px solid #aaa;
@@ -82,9 +83,11 @@ div.notice-set {
         }
         div.message {}
         padding-bottom: 10px;
+        
     }
 
     div.checkin {
+        margin-left: 40px;
         position: relative;
         div.date {
             display: inline;
@@ -96,6 +99,7 @@ div.notice-set {
         div.note {
             display: inline;
         }
+        padding-bottom: 10px;
     }
 }
 
@@ -224,6 +228,7 @@ form.checkin {
     color: white;
     cursor: pointer;
     padding: 4px;
+    width: 80px;
 }
 
 input#checkin_button {
@@ -243,10 +248,60 @@ input#logout_button:hover {
 }
 
 
-input#post_button {
+input.post_button {
     .flat-button;
 }
 
-input#post_button:hover {
+input.post_button:hover {
     background-color: #b80000;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+    position: absolute;
+    top: 4px;
+    left: -40px;
+}
+
+div.icon_checkin {
+    .icon;
+    height: 16px;
+    background-color: #ff6600;
+    .border-radius(4px);
+}
+
+div.icon_question {
+    .icon;
+    background-color: #77b300;
+    font-weight: bold;
+    color: white;
+    .border-radius(4px);
+}
+
+div.icon_info {
+    .icon;
+    background-color: #0077b3;
+    font-weight: bold;
+    color: white;
+    .border-radius(16px);
+}
+
+div.icon_problem {
+    .icon;
+    background-color: #cc0000;
+    font-weight: bold;
+    color: white;
+    .border-radius(4px);
+}
+
+div.icon_praise {
+    .icon;
+    background-color: #ffcc00;
+    font-weight: bold;
+    color: black;
+    .border-radius(4px);
 }

@@ -26,7 +26,7 @@
       <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="14" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.38353765">
+            <state line="304" column="16" selection-start="5420" selection-end="5420" vertical-scroll-proportion="0.8038529">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="street.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/street.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="56" selection-start="3860" selection-end="3860" vertical-scroll-proportion="-8.96">
+            <state line="95" column="42" selection-start="5268" selection-end="5268" vertical-scroll-proportion="-14.72">
               <folding />
             </state>
           </provider>
@@ -320,13 +320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/select_street.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="49" selection-start="887" selection-end="887" vertical-scroll-proportion="-11.52">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/streetstatus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="21" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
@@ -341,16 +334,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/select_street.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="49" selection-start="887" selection-end="887" vertical-scroll-proportion="-11.52">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/street.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="56" selection-start="3860" selection-end="3860" vertical-scroll-proportion="-8.96">
+        <state line="95" column="42" selection-start="5268" selection-end="5268" vertical-scroll-proportion="-14.72">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="14" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.38353765">
+        <state line="304" column="16" selection-start="5420" selection-end="5420" vertical-scroll-proportion="0.8038529">
           <folding />
         </state>
       </provider>
