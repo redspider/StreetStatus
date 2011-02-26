@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, tzinfo, timedelta
 import time
 import tornado.websocket
 import tornado.ioloop
@@ -35,9 +35,9 @@ class FixedOffset(tzinfo):
         return self.__name
 
     def dst(self, dt):
-        return ZERO
+        return timedelta(0)
 
-nztz = FixedOffset(60*12, 'NZST')
+nztz = FixedOffset(13*60, 'NZDT')
 
 def format_date(t):
     if type(t) is datetime:
@@ -50,20 +50,28 @@ def format_delta(dt):
     if not type(dt) is datetime:
         dt = dt.as_datetime()
 
-    now = datetime.utcnow()
+    now = datetime.now()
     if dt.tzinfo:
         now = datetime.now(nztz)
-        
+        print now, dt
+
     delta = now - dt
-    n = delta.seconds + (24*60*60*delta.days)
+    print delta
+    n = delta.seconds + (24*60*60*delta.days) + 13*60*60
     if n < 60:
         return "%d seconds ago" % n
     n = (n - n % 60) / 60
     if n < 60:
-        return "%d minutes ago" % n
+        if n == 1:
+            return "1 minute ago"
+        else:
+            return "%d minutes ago" % n
     n = (n - n % 60) / 60
     if n < 24:
-        return "%d hours ago" % n
+        if n == 1:
+            return "1 hour ago"
+        else:
+            return "%d hours ago" % n
     n = (n - n % 24) / 24
     return "%d days ago" % n
 

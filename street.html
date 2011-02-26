@@ -115,7 +115,7 @@
                         {{ incident['location']['name'] }}
                     </div>
                     <div class="distance">
-                        Estimated {{ "0.1f" % incident['distance']/1000 }}km away
+                        Estimated {{ "%0.1f" % (incident['distance']/1000.0) }}km away
                     </div>
                     <div class="dated">
                         Reported {{ format_date(incident['dated']) }}

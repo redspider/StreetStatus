@@ -44,7 +44,7 @@
       <file leaf-file-name="server.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="31" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.91593695">
+            <state line="71" column="27" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.7565674">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="street.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/street.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="69" selection-start="6490" selection-end="6490" vertical-scroll-proportion="-12.88">
+            <state line="124" column="18" selection-start="6590" selection-end="6590" vertical-scroll-proportion="-15.44">
               <folding />
             </state>
           </provider>
@@ -343,14 +343,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/street.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="69" selection-start="6490" selection-end="6490" vertical-scroll-proportion="-12.88">
+        <state line="124" column="18" selection-start="6590" selection-end="6590" vertical-scroll-proportion="-15.44">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="31" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.91593695">
+        <state line="71" column="27" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.7565674">
           <folding />
         </state>
       </provider>
