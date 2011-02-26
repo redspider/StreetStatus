@@ -57,7 +57,7 @@ def format_delta(dt):
 
     delta = now - dt
     print delta
-    n = delta.seconds + (24*60*60*delta.days) + 13*60*60
+    n = delta.seconds + (24*60*60*delta.days)
     if n < 60:
         return "%d seconds ago" % n
     n = (n - n % 60) / 60
