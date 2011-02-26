@@ -53,10 +53,8 @@ def format_delta(dt):
     now = datetime.now()
     if dt.tzinfo:
         now = datetime.now(nztz)
-        print now, dt
 
     delta = now - dt
-    print delta
     n = delta.seconds + (24*60*60*delta.days)
     if n < 60:
         return "%d seconds ago" % n
@@ -94,7 +92,7 @@ class IndexHandler(tornado.web.RequestHandler):
         lat = geo['geo']['geometry']['location']['lat']
         long = geo['geo']['geometry']['location']['lng']
 
-        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date, format_delta=format_delta, geo=str(geo), lat=lat, long=long, nearby=find_nearby(lat, long, 500, 10))
+        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date, format_delta=format_delta, geo=str(geo), lat=lat, long=long, nearby=find_nearby(lat, long, 10))
 
 class LogoutHandler(tornado.web.RequestHandler):
     def post(self, *args, **kwargs):
@@ -180,7 +178,7 @@ def rebuild_location_cache():
 
     tornado.ioloop.IOLoop.instance().add_timeout(time.time()+60, rebuild_location_cache)
 
-def find_nearby(lat,long,max_distance, limit):
+def find_nearby(lat,long, limit):
     """ Returns nearest limit incident objects within max_distance in distance order """
     results = []
     target = Point(lat,long)
