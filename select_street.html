@@ -15,8 +15,8 @@
         <ul>
             {% for street in streets %}
                 <li><a href="/find?street={{ url_escape(street) }}">{{ escape(street) }}</a></li>
-                <li>or <a href="/">try again</a></li>
             {% end %}
+            <li>or <a href="/">try again</a></li>
         </ul>
     {% end %}
 </body>

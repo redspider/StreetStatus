@@ -41,19 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.25218913">
+            <state line="30" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="select_street.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="select_street.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/select_street.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="21" selection-start="891" selection-end="891" vertical-scroll-proportion="-11.52">
+            <state line="18" column="49" selection-start="887" selection-end="887" vertical-scroll-proportion="0.52747256">
               <folding />
             </state>
           </provider>
@@ -87,12 +87,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/select_street.html" />
         <option value="$PROJECT_DIR$/static/streetstatus.js" />
         <option value="$PROJECT_DIR$/street.html" />
         <option value="$PROJECT_DIR$/static/style.less" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/select_street.html" />
       </list>
     </option>
   </component>
@@ -292,13 +292,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/select_street.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="21" selection-start="891" selection-end="891" vertical-scroll-proportion="-11.52">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/streetstatus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="21" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
@@ -329,7 +322,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.25218913">
+        <state line="30" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select_street.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="49" selection-start="887" selection-end="887" vertical-scroll-proportion="0.52747256">
           <folding />
         </state>
       </provider>
