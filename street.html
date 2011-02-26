@@ -6,20 +6,21 @@
     <link rel="stylesheet" type="text/css" href="static/style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="static/streetstatus.js"></script>
+    <meta name="viewport" content="width=960">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 </head>
 <body>
-    <div class="streetbox">
-        <form action="/logout" method="post">
-            {{ escape(name) }} <input type="submit" value="Logout" />
-        </form>
-    </div>
     <div class="content">
         <h2>{{ street }}</h2>
-        <div id="checkin_form">
+        <div class="account">
+            {{ escape(name) }}
             <form class="checkin" method="post" action="/post">
                 {{ xsrf_form_html() }}
                 <input type="hidden" name="type" value="checkin" />
-                <input type="submit" value="Check in" />
+                <input id="checkin_button" type="submit" value="Check in" />
+            </form>
+            <form action="/logout" method="post">
+                <input id="logout_button" type="submit" value="Logout" />
             </form>
         </div>
 
@@ -34,7 +35,7 @@
                     </ul>
                     <div class="panes">
                         <div id="question">
-                            <a name="question">Ask a question of your community</a>
+                            <a name="question">Ask a question of your street</a>
                             <form class="notice" method="post" action="/post">
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="question" />
@@ -43,7 +44,7 @@
                             </form>
                         </div>
                         <div id="info">
-                            <a name="info">Share information with your community</a>
+                            <a name="info">Share information with your street</a>
                             <form class="notice" method="post" action="/post">
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="info" />
@@ -52,7 +53,7 @@
                             </form>
                         </div>
                         <div id="problem">
-                            <a name="problem">Report a problem to your community</a>
+                            <a name="problem">Report a problem to your street</a>
                             <form class="notice" method="post" action="/post">
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="problem" />
@@ -61,12 +62,12 @@
                             </form>
                         </div>
                         <div id="praise">
-                            <a name="praise">Give praise to your community</a>
+                            <a name="praise">Give praise to your street</a>
                             <form class="notice" method="post" action="/post">
                                 {{ xsrf_form_html() }}
                                 <input type="hidden" name="type" value="praise" />
                                 <textarea id="message" cols="40" rows="4" name="message"></textarea><br />
-                                <input type="submit" value="Post" />
+                                <input id="post_button" type="submit" value="Post" />
                             </form>
                         </div>
                     </div>

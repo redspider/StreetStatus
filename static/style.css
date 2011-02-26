@@ -3,6 +3,7 @@
 @import url("text.css");
 /* Reset to some base standard */
 /* Set up text so it isn't completely awful */
+/* Tools */
 /* Page */
 html {
   background-color: white;
@@ -13,7 +14,7 @@ body {
   margin: 0px auto 0px auto;
   padding: 10px;
   position: relative;
-  width: 768px;
+  width: 960px;
   color: #222;
 }
 a {
@@ -23,6 +24,15 @@ a {
 h2 {
   color: #444;
   border-bottom: 4px solid #555;
+}
+div.account {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  text-align: right;
+}
+div.account form {
+  display: inline;
 }
 div.streetbox {
   background-color: #ddd;
@@ -69,10 +79,10 @@ form.checkin label, form.notice label {
   font-size: 90%;
 }
 ul.tabs {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 0px 0px 0px;
   padding: 0;
   list-style: none;
-  height: 32px;
+  height: 26px;
   /*--Set height of tabs--*/
 
   width: 100%;
@@ -81,10 +91,10 @@ ul.tabs li {
   display: inline-block;
   margin: 0;
   padding: 0;
-  height: 31px;
+  height: 26px;
   /*--Subtract 1px from the height of the unordered list--*/
 
-  line-height: 31px;
+  line-height: 26px;
   /*--Vertically aligns the text within the tab--*/
 
   margin-bottom: -1px;
@@ -98,14 +108,27 @@ ul.tabs li a {
   color: #000;
   display: block;
   font-size: 1.0em;
-  padding: 0 20px;
+  padding: 0 6px;
   outline: none;
+  border: 1px solid #999999;
+  width: 120px;
+  text-align: center;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 ul.tabs li a.selected {
-  background: #CCC;
+  background: #990000;
+  color: white;
+  border: 1px solid #990000;
 }
 ul.tabs li a:hover {
-  background: #ccc;
+  background: #990000;
+  color: white;
+  border: 1px solid #990000;
 }
 html ul.tabs li.active, html ul.tabs li.active a:hover {
   /*--Makes sure that the active tab does not listen to the hover properties--*/
@@ -131,15 +154,16 @@ div.panes div a[name] {
   color: #444;
 }
 div.panes div form {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 0px 0px 0px;
 }
 div.panes div form textarea {
   width: 100%;
   height: 100px;
   margin: 0px;
+  border: 1px solid #999999;
 }
 div.notice-col {
-  width: 468px;
+  width: 640px;
 }
 div.info-col {
   width: 290px;
@@ -162,4 +186,46 @@ div.incident .distance, div.incident .location {
 div.incident .dated {
   color: #444;
   margin-left: 10px;
+}
+form.checkin {
+  text-align: right;
+}
+input#checkin_button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #669900;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+}
+input#checkin_button:hover {
+  background-color: #77b300;
+}
+input#logout_button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #990000;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+}
+input#logout_button:hover {
+  background-color: #b80000;
+}
+input#post_button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #990000;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+}
+input#post_button:hover {
+  background-color: #b80000;
 }
