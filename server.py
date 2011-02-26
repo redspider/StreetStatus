@@ -32,8 +32,7 @@ def format_delta(dt):
     if not type(dt) is datetime:
         dt = dt.as_datetime()
 
-    now = datetime.now()
-    now.tzinfo = None
+    now = datetime.utcnow()
     delta = now - dt
     n = delta.seconds + (24*60*60*delta.days)
     if n < 60:
