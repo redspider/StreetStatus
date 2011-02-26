@@ -96,6 +96,9 @@
                     <div class="title">
                         <a href="http://eq.org.nz/report/view/{{ incident['id'] }}">{{ incident['title'] }}</a>
                     </div>
+                    <div class="location">
+                        {{ incident['location']['name'] }}
+                    </div>
                     <div class="distance">
                         Estimated {{ (int(incident['distance']/100)*100) or 100 }}m away
                     </div>
