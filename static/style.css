@@ -203,6 +203,7 @@ input#checkin_button {
   cursor: pointer;
   padding: 4px;
   width: 80px;
+  font-weight: bold;
 }
 input#checkin_button:hover {
   background-color: #77b300;
@@ -217,6 +218,7 @@ input#logout_button {
   cursor: pointer;
   padding: 4px;
   width: 80px;
+  font-weight: bold;
 }
 input#logout_button:hover {
   background-color: #b80000;
@@ -231,6 +233,7 @@ input.post_button {
   cursor: pointer;
   padding: 4px;
   width: 80px;
+  font-weight: bold;
 }
 input.post_button:hover {
   background-color: #b80000;
