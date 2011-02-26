@@ -32,19 +32,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="7" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.7912088">
+            <state line="27" column="7" selection-start="1107" selection-end="1107" vertical-scroll-proportion="-17.28">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="47" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.25218913">
               <folding />
             </state>
           </provider>
@@ -91,8 +91,8 @@
         <option value="$PROJECT_DIR$/static/streetstatus.js" />
         <option value="$PROJECT_DIR$/street.html" />
         <option value="$PROJECT_DIR$/static/style.less" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
@@ -320,16 +320,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="47" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+        <state line="27" column="7" selection-start="1107" selection-end="1107" vertical-scroll-proportion="-17.28">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="7" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.7912088">
+        <state line="30" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.25218913">
           <folding />
         </state>
       </provider>

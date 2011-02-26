@@ -27,12 +27,14 @@ class IndexHandler(tornado.web.RequestHandler):
     """Regular HTTP handler to serve the dashboard page"""
     def get(self, *args, **kwargs):
         """ Display street """
+        name = self.get_secure_cookie('name') or ''
+
+
         if not self.get_secure_cookie('street'):
             self.render("index.html", name=name)
             return
 
         street = self.get_secure_cookie('street')
-        name = self.get_secure_cookie('name') or ''
 
         # Retrieve street details (pagination would be good)
         notices = mc.notices.find({'street': street}).sort([('dated',-1)]).limit(40)
