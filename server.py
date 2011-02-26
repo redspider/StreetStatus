@@ -68,6 +68,9 @@ class FindStreetHandler(tornado.web.RequestHandler):
         streets = []
         if result['status'] == 'OK':
             streets = [c['formatted_address'] for c in result['results'] if "route" in c['types']]
+        if len(streets) == 1:
+            self.set_secure_cookie('street', street[0])
+            self.redirect('/')
         self.render("select_street.html", streets=streets)
 
     def get(self, *args, **kwargs):
@@ -94,7 +97,7 @@ class PostHandler(tornado.web.RequestHandler):
         if self.get_argument('type') == 'checkin':
             notice['type'] = 'checkin'
         else:
-            notice['type'] = 'notice'
+            notice['type'] = self.get_argument('type')
             notice['message'] = linkify(self.get_argument('message'))
 
         mc.notices.insert(notice)

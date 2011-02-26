@@ -3,9 +3,9 @@
 <html>
 <head>
     <title>{{ street }}</title>
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/streetstatus.js"></script>
+    <script type="text/javascript" src="static/streetstatus.js"></script>
 </head>
 <body>
     <div class="streetbox">
@@ -24,27 +24,64 @@
         </div>
 
         <div id="notice_form">
-            <form class="notice" method="post" action="/post">
-                {{ xsrf_form_html() }}
-                <input type="hidden" name="type" value="notice" />
-                <label for="message">What's happening?</label><textarea id="message" cols="40" rows="4" name="message"></textarea><br />
-                <input type="submit" value="Post" />
-            </form>
+            <ul class="tabs">
+                <li><a href="#question">Ask a question</a></li>
+                <li><a href="#info">Share information</a></li>
+                <li><a href="#problem">Report a problem</a></li>
+                <li><a href="#praise">Give praise</a></li>
+            </ul>
+            <div class="panes">
+                <div id="question">
+                    <a name="question">Ask a question of your community</a>
+                    <form class="notice" method="post" action="/post">
+                        {{ xsrf_form_html() }}
+                        <input type="hidden" name="type" value="question" />
+                        <textarea id="message" cols="60" rows="4" name="message"></textarea><br />
+                        <input type="submit" value="Post" />
+                    </form>
+                </div>
+                <div id="info">
+                    <a name="info">Share information with your community</a>
+                    <form class="notice" method="post" action="/post">
+                        {{ xsrf_form_html() }}
+                        <input type="hidden" name="type" value="info" />
+                        <textarea id="message" cols="60" rows="4" name="message"></textarea><br />
+                        <input type="submit" value="Post" />
+                    </form>
+                </div>
+                <div id="problem">
+                    <a name="problem">Report a problem to your community</a>
+                    <form class="notice" method="post" action="/post">
+                        {{ xsrf_form_html() }}
+                        <input type="hidden" name="type" value="problem" />
+                        <textarea id="message" cols="40" rows="4" name="message"></textarea><br />
+                        <input type="submit" value="Post" />
+                    </form>
+                </div>
+                <div id="praise">
+                    <a name="praise">Give praise to your community</a>
+                    <form class="notice" method="post" action="/post">
+                        {{ xsrf_form_html() }}
+                        <input type="hidden" name="type" value="praise" />
+                        <textarea id="message" cols="40" rows="4" name="message"></textarea><br />
+                        <input type="submit" value="Post" />
+                    </form>
+                </div>
+            </div>
         </div>
 
         <div class="notice-set">
             {% for notice in notices %}
-                {% if notice['type'] == 'notice' %}
-                    <div class="notice">
-                        <div class="date">{{ format_date(notice['dated']) }}</div>
-                        <div class="name">{{ escape(notice['name'])}}</div>
-                        <div class="message">{{ notice['message'] }}</div>
-                    </div>
-                {% else %}
+                {% if notice['type'] == 'checkin' %}
                     <div class="checkin">
                         <div class="date">{{ format_date(notice['dated']) }}</div>
                         <div class="name">{{ escape(notice['name'])}}</div>
-                        <div class="note">checked in</div>
+                    </div>
+                {% else %}
+                    <div class="notice {{ notice['type'] }}">
+                        <div class="date">{{ format_date(notice['dated']) }}</div>
+                        <div class="name">{{ escape(notice['name'])}}</div>
+                        <div class="message">{{ notice['message'] }}</div>
                     </div>
                 {% end %}
             {% end %}
