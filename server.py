@@ -57,7 +57,7 @@ def format_delta(dt):
     delta = now - dt
     n = delta.seconds + (24*60*60*delta.days)
     if n < 60:
-        return "%d seconds ago" % n
+        return "Just now"
     n = (n - n % 60) / 60
     if n < 60:
         if n == 1:
