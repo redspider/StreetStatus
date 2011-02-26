@@ -44,7 +44,6 @@ class IndexHandler(tornado.web.RequestHandler):
         # Retrieve street details (pagination would be good)
         notices = mc.notices.find({'street': street}).sort([('dated',-1)]).limit(40)
         geo = mc.streets.find_one({'street': street}) or 'none'
-        print geo['geo']['geometry']
         lat = geo['geo']['geometry']['location']['lat']
         long = geo['geo']['geometry']['location']['lng']
 
@@ -128,7 +127,6 @@ def rebuild_location_cache():
     incidents = []
     incident_map = {}
     for incident in mc.incident.find({}):
-        print incident
         point = Point(incident['location']['latitude'],incident['location']['longitude'])
         incidents.append((incident['id'], point))
         incident_map[incident['id']] = incident
