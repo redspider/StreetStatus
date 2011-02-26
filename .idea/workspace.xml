@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="266" column="10" selection-start="4824" selection-end="4824" vertical-scroll-proportion="0.2994746">
+            <state line="285" column="15" selection-start="5101" selection-end="5101" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="7" selection-start="1107" selection-end="1107" vertical-scroll-proportion="-17.28">
+            <state line="8" column="94" selection-start="419" selection-end="419" vertical-scroll-proportion="0.23443224">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="select_street.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/select_street.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="49" selection-start="887" selection-end="887" vertical-scroll-proportion="-11.52">
+            <state line="6" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="-3.84">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="street.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/street.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="42" selection-start="5268" selection-end="5268" vertical-scroll-proportion="-14.72">
+            <state line="10" column="0" selection-start="414" selection-end="556" vertical-scroll-proportion="-6.4">
               <folding />
             </state>
           </provider>
@@ -101,12 +101,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/static/streetstatus.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/select_street.html" />
         <option value="$PROJECT_DIR$/ush_pull.py" />
         <option value="$PROJECT_DIR$/server.py" />
-        <option value="$PROJECT_DIR$/street.html" />
         <option value="$PROJECT_DIR$/static/style.less" />
+        <option value="$PROJECT_DIR$/street.html" />
+        <option value="$PROJECT_DIR$/select_street.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -327,30 +327,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/static/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="7" selection-start="1107" selection-end="1107" vertical-scroll-proportion="-17.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/select_street.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="49" selection-start="887" selection-end="887" vertical-scroll-proportion="-11.52">
+        <state line="285" column="15" selection-start="5101" selection-end="5101" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/street.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="42" selection-start="5268" selection-end="5268" vertical-scroll-proportion="-14.72">
+        <state line="10" column="0" selection-start="414" selection-end="556" vertical-scroll-proportion="-6.4">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/style.less">
+    <entry file="file://$PROJECT_DIR$/select_street.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="10" selection-start="4824" selection-end="4824" vertical-scroll-proportion="0.2994746">
+        <state line="6" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="-3.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="94" selection-start="419" selection-end="419" vertical-scroll-proportion="0.23443224">
           <folding />
         </state>
       </provider>
