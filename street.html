@@ -91,7 +91,19 @@
              </div>
             <div class="info-col">
                 <h4>Nearby</h4>
-                {{ escape(geo) }}
+                {% for incident in nearby %}
+                <div class="incident">
+                    <div class="title">
+                        <a href="http://eq.org.nz/report/view/{{ incident['id'] }}">{{ incident['title'] }}</a>
+                    </div>
+                    <div class="distance">
+                        Estimated {{ (int(incident['distance']/100)*100) or 100 }}m away
+                    </div>
+                    <div class="dated">
+                        Reported {{ format_date(incident['dated']) }}
+                    </div>
+                </div>
+                {% end %}
             </div>
         </div>
     </div>

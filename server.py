@@ -1,6 +1,5 @@
 from datetime import datetime
-from time import time
-import tornado.web
+import time
 import tornado.websocket
 import tornado.ioloop
 import tornado.httpserver
@@ -23,6 +22,9 @@ mc.notices.ensure_index([('dated',pymongo.DESCENDING)])
 mc.notices.ensure_index([('street',pymongo.DESCENDING)])
 
 def format_date(t):
+    if type(t) is datetime:
+        return t.strftime('%d %b %H:%M')
+
     d = t.as_datetime()
     return d.strftime('%d %b %H:%M')
 
@@ -42,8 +44,11 @@ class IndexHandler(tornado.web.RequestHandler):
         # Retrieve street details (pagination would be good)
         notices = mc.notices.find({'street': street}).sort([('dated',-1)]).limit(40)
         geo = mc.streets.find_one({'street': street}) or 'none'
+        print geo['geo']['geometry']
+        lat = geo['geo']['geometry']['location']['lat']
+        long = geo['geo']['geometry']['location']['lng']
 
-        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date, geo=str(geo))
+        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date, geo=str(geo), lat=lat, long=long, nearby=find_nearby(lat, long, 500, 10))
 
 class LogoutHandler(tornado.web.RequestHandler):
     def post(self, *args, **kwargs):
@@ -118,16 +123,30 @@ incidents = []
 incident_map = {}
 
 def rebuild_location_cache():
+    """ Rebuilds incident location cache """
     global incidents,incident_map
     incidents = []
     incident_map = {}
     for incident in mc.incident.find({}):
-        point = Point(incident['latitude'],incident['longitude'])
+        print incident
+        point = Point(incident['location']['latitude'],incident['location']['longitude'])
         incidents.append((incident['id'], point))
         incident_map[incident['id']] = incident
 
     tornado.ioloop.IOLoop.instance().add_timeout(time.time()+60, rebuild_location_cache)
-    
+
+def find_nearby(lat,long,max_distance, limit):
+    """ Returns nearest limit incident objects within max_distance in distance order """
+    results = []
+    target = Point(lat,long)
+    for (id, p) in incidents:
+        m = target.distance(p) * 1000
+        #if m <= max_distance:
+        results.append((m,id))
+
+    results.sort(cmp=lambda a,b: cmp(a[0],b[0]))
+    return [dict(distance=i[0], **incident_map[i[1]]) for i in results[:limit]]
+
     
 #configure the Tornado application
 application = tornado.web.Application(
