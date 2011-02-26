@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="26" selection-start="3991" selection-end="3991" vertical-scroll-proportion="0.57968473">
+            <state line="215" column="0" selection-start="4048" selection-end="4048" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+            <state line="66" column="130" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="street.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="street.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/street.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="82" selection-start="6067" selection-end="6067" vertical-scroll-proportion="-16.64">
+            <state line="79" column="65" selection-start="4321" selection-end="4321" vertical-scroll-proportion="0.32600734">
               <folding />
             </state>
           </provider>
@@ -102,11 +102,11 @@
       <list>
         <option value="$PROJECT_DIR$/static/streetstatus.js" />
         <option value="$PROJECT_DIR$/ush_pull.py" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/select_street.html" />
-        <option value="$PROJECT_DIR$/street.html" />
         <option value="$PROJECT_DIR$/static/style.less" />
+        <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/street.html" />
       </list>
     </option>
   </component>
@@ -306,13 +306,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/streetstatus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ush_pull.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="48" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.0">
@@ -327,13 +320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="-4.48">
@@ -341,16 +327,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/street.html">
+    <entry file="file://$PROJECT_DIR$/static/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="82" selection-start="6067" selection-end="6067" vertical-scroll-proportion="-16.64">
+        <state line="215" column="0" selection-start="4048" selection-end="4048" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/style.less">
+    <entry file="file://$PROJECT_DIR$/static/streetstatus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="26" selection-start="3991" selection-end="3991" vertical-scroll-proportion="0.57968473">
+        <state line="10" column="21" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="130" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/street.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="65" selection-start="4321" selection-end="4321" vertical-scroll-proportion="0.32600734">
           <folding />
         </state>
       </provider>

@@ -28,6 +28,23 @@ def format_date(t):
     d = t.as_datetime()
     return d.strftime('%d %b %H:%M')
 
+def format_delta(dt):
+    if not type(dt) is datetime:
+        dt = dt.as_datetime()
+
+    delta = datetime.now() - dt
+    n = delta.seconds + (24*60*60*delta.days)
+    if n < 60:
+        return "%d seconds ago" % n
+    n = (n - n % 60) / 60
+    if n < 60:
+        return "%d minutes ago" % n
+    n = (n - n % 60) / 60
+    if n < 24:
+        return "%d hours ago" % n
+    n = (n - n % 24) / 24
+    return "%d days ago" % n
+
 class IndexHandler(tornado.web.RequestHandler):
     """Regular HTTP handler to serve the dashboard page"""
     def get(self, *args, **kwargs):
@@ -47,7 +64,7 @@ class IndexHandler(tornado.web.RequestHandler):
         lat = geo['geo']['geometry']['location']['lat']
         long = geo['geo']['geometry']['location']['lng']
 
-        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date, geo=str(geo), lat=lat, long=long, nearby=find_nearby(lat, long, 500, 10))
+        self.render("street.html", street=street, notices=notices, name=name, format_date=format_date, format_delta=format_delta, geo=str(geo), lat=lat, long=long, nearby=find_nearby(lat, long, 500, 10))
 
 class LogoutHandler(tornado.web.RequestHandler):
     def post(self, *args, **kwargs):
