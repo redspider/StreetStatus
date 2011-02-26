@@ -21,6 +21,24 @@ mc = mongo_connection['street_status']
 mc.notices.ensure_index([('dated',pymongo.DESCENDING)])
 mc.notices.ensure_index([('street',pymongo.DESCENDING)])
 
+class FixedOffset(tzinfo):
+    """Fixed offset in minutes east from UTC."""
+
+    def __init__(self, offset, name):
+        self.__offset = timedelta(minutes = offset)
+        self.__name = name
+
+    def utcoffset(self, dt):
+        return self.__offset
+
+    def tzname(self, dt):
+        return self.__name
+
+    def dst(self, dt):
+        return ZERO
+
+nztz = FixedOffset(60*12, 'NZST')
+
 def format_date(t):
     if type(t) is datetime:
         return t.strftime('%d %b %H:%M')
@@ -34,7 +52,7 @@ def format_delta(dt):
 
     now = datetime.utcnow()
     if dt.tzinfo:
-        now = datetime.now()
+        now = datetime.now(nztz)
         
     delta = now - dt
     n = delta.seconds + (24*60*60*delta.days)
