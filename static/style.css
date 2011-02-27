@@ -35,14 +35,17 @@ div.account form {
   display: inline;
 }
 div.streetbox {
-  background-color: #ddd;
-  text-align: center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #990000;
   padding: 10px;
   position: relative;
   top: -10px;
   left: -10px;
-  width: 768px;
   font-size: 120%;
+  color: white;
+  margin: 10px 60px 10px 60px;
 }
 div.notice-set div.notice {
   margin-left: 40px;
@@ -262,6 +265,21 @@ input.post_button {
 }
 input.post_button:hover {
   background-color: #b80000;
+}
+input.go_button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #e68a00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  width: 80px;
+  font-weight: bold;
+}
+input.go_button:hover {
+  background-color: #ff9900;
 }
 .icon {
   width: 32px;

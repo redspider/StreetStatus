@@ -2,26 +2,40 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>StreetStatus</title>
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <script src="/static/streetstatus.js"></script>
+    <title>Streets.eq.org.nz</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <script src="static/streetstatus.js"></script>
 </head>
 <body>
 <h2>Street Status for Christchurch</h2>
-<div class="streetbox">
-    <form method="post" action="/find">
-        <label>Type in your name</label><input type="text" name="name" value="{{ name }}"/><br />
-        <label>Type in your street</label><input type="text" name="street" />, Christchurch New Zealand
-        <input type="submit" value="Go" />
-    </form>
-</div>
 <div class="content">
-    <h4>Street by Street</h4>
-    <p>
-        StreetStatus helps Christchurch residents coordinate and communicate with each other at the vital local level. Use
-        StreetStatus to run a notice board just for your street, use Check ins to keep track of each other and make sure
-        you're ok.
-    </p>
+    <div class="col-set clearfix">
+        <div class="notice-col">
+            <h4>Street by Street</h4>
+            <p>
+                Help coordinate and inform your neighbours using our street-focused noticeboard. With Streets you can:
+                <ul>
+                    <li>Check in to let your neighbours know you're ok</li>
+                    <li>Report problems, provide information and ask questions, which your neighbours and response agencies can see</li>
+                    <li>See resources and issues near to you</li>
+                </ul>
+                all in a really simple fashion. Just enter your name and your street below and you're good to go.
+            </p>
+            <div class="streetbox">
+                <form method="post" action="/find">
+                    <label>Type in your name</label><input type="text" name="name" value="{{ name }}"/><br />
+                    <label>Type in your street</label><input type="text" name="street" />, Christchurch New Zealand<br />
+                    <div style="text-align: right">
+                        <input class="go_button" type="submit" value="Go!" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="info-col">
+            <h4>Other resources</h4>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

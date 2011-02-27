@@ -58,14 +58,15 @@ div.account {
 }
 
 div.streetbox {
-    background-color: #ddd;
-    text-align: center;
+    .border-radius(8px);
+    background-color: #990000;
     padding: 10px;
     position: relative;
     top: -10px;
     left: -10px;
-    width: 768px;
     font-size: 120%;
+    color: white;
+    margin: 10px 60px 10px 60px;
 }
 
 div.notice-set {
@@ -277,6 +278,14 @@ input.post_button {
 
 input.post_button:hover {
     background-color: #b80000;
+}
+
+input.go_button {
+    .flat-button(#e68a00);
+}
+
+input.go_button:hover {
+    background-color: #ff9900;
 }
 
 .icon {
